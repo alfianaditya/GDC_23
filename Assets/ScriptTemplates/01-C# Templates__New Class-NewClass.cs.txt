@@ -1,0 +1,13 @@
+#ROOTNAMESPACEBEGIN#
+    /// <summary>
+    /// 
+    /// </summary>
+    public class #SCRIPTNAME#
+    {
+        #NOTRIM#
+
+        #region Private methods
+        #NOTRIM#
+        #endregion
+    }
+#ROOTNAMESPACEEND#

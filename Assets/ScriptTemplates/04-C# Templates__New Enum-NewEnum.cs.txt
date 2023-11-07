@@ -1,0 +1,9 @@
+#ROOTNAMESPACEBEGIN#
+    /// <summary>
+    /// 
+    /// </summary>
+    public enum #SCRIPTNAME#
+    {
+        #NOTRIM#
+    }
+#ROOTNAMESPACEEND#

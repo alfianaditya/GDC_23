@@ -1,0 +1,9 @@
+#ROOTNAMESPACEBEGIN#
+    /// <summary>
+    /// 
+    /// </summary>
+    public interface #SCRIPTNAME#
+    {
+        #NOTRIM#
+    }
+#ROOTNAMESPACEEND#

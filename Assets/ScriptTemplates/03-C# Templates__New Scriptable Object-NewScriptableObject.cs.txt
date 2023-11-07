@@ -1,0 +1,22 @@
+using UnityEngine;
+
+#ROOTNAMESPACEBEGIN#
+    /// <summary>
+    /// 
+    /// </summary>
+    [CreateAssetMenu(fileName = "", menuName = "")]
+    public class #SCRIPTNAME# : ScriptableObject
+    {
+        #NOTRIM#
+        
+        #region MonoBehaviour methods
+        #NOTRIM#
+        #endregion
+        #NOTRIM#
+        #NOTRIM#
+        #NOTRIM#
+        #region Private methods
+        #NOTRIM#
+        #endregion
+    }
+#ROOTNAMESPACEEND#
