@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "GDC2023.sln"
+    "dotnet.defaultSolution": "GDC_23.sln"
 }
