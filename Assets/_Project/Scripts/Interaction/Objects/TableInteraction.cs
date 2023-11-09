@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using GDC.Misc;
+using GDC.Time;
 using UnityEngine;
 
 namespace GDC.Interaction
@@ -9,13 +11,32 @@ namespace GDC.Interaction
     /// </summary>
     public class TableInteraction : MonoBehaviour, IInteractable
     {
-        [SerializeField] private string objectName;
+        private Coroutine coroutine;
+        [field:SerializeField] public string InteractableName { get; private set; }
 
         #region Public methods
         public void Interact()
         {
-            Debug.Log("Interacting with " + objectName);
+            if (coroutine != null)
+            {
+                return;
+            }
+
+            coroutine = StartCoroutine(Wait());
         } 
+        #endregion
+
+
+
+        #region Private methods
+        private IEnumerator Wait()
+        {
+            FadeBlack.FadeOut(1);
+            yield return new WaitForSeconds(2);
+            TimeManager.AdvanceTime(1);
+            FadeBlack.FadeIn(1);
+            coroutine = null;
+        }
         #endregion
     }
 }

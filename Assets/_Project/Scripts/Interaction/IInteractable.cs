@@ -5,6 +5,7 @@ namespace GDC.Interaction
     /// </summary>
     public interface IInteractable
     {
+        string InteractableName { get; }
         void Interact();
     }
 }

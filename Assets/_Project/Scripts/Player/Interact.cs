@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using GDC.Interaction;
+using GDC.Utilities;
 
 namespace GDC.Player
 {
@@ -17,6 +18,15 @@ namespace GDC.Player
         private void OnTriggerEnter2D(Collider2D other)
         {
             CheckInteractable(other.gameObject);
+        }
+
+
+
+        private void OnTriggerExit2D(Collider2D other)
+        {
+            interactableObject = null;
+            OnInteractableExit evt = new OnInteractableExit();
+            EventManager.Broadcast(evt);
         }
 
 
@@ -39,6 +49,8 @@ namespace GDC.Player
                 if (component is IInteractable)
                 {
                     interactableObject = component;
+                    OnInteractable evt = new OnInteractable((component as IInteractable).InteractableName);
+                    EventManager.Broadcast(evt);
                 }
             }
         }
