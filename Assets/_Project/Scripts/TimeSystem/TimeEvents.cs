@@ -15,10 +15,12 @@ namespace GDC.Utilities
     public class OnEnergyChanged : GameEvent
     {
         public int Energy { get; private set; }
+        public bool IsRising { get; private set; }
 
-        public OnEnergyChanged(int energy)
+        public OnEnergyChanged(int energy, bool isRising = true)
         {
             Energy = energy;
+            IsRising = isRising;
         }
     }
 }

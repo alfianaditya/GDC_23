@@ -10,7 +10,7 @@ namespace GDC.Misc
     /// </summary>
     public class FadeBlack : Singleton<FadeBlack>
     {
-        [SerializeField] private Image fadeImage;
+        [SerializeField] private CanvasGroup canvasGroup;
 
         #region MonoBehaviour methods
         protected override void Awake()
@@ -25,12 +25,18 @@ namespace GDC.Misc
         public static void FadeIn(float duration)
         {
             Instance.StartCoroutine(Instance.FadeBlackIn(duration));
+
+            Instance.canvasGroup.interactable = false;
+            Instance.canvasGroup.blocksRaycasts = false;
         }
 
 
 
         public static void FadeOut(float duration)
         {
+            Instance.canvasGroup.interactable = true;
+            Instance.canvasGroup.blocksRaycasts = true;
+
             Instance.StartCoroutine(Instance.FadeBlackOut(duration));
         }
         #endregion
@@ -45,7 +51,7 @@ namespace GDC.Misc
             {
                 time += UnityEngine.Time.deltaTime;
                 float alpha = Mathf.Lerp(1f, 0f, time / duration);
-                fadeImage.color = new Color(0f, 0f, 0f, alpha);
+                canvasGroup.alpha = alpha;
 
                 yield return null;
             }
@@ -60,7 +66,7 @@ namespace GDC.Misc
             {
                 time += UnityEngine.Time.deltaTime;
                 float alpha = Mathf.Lerp(0f, 1f, time / duration);
-                fadeImage.color = new Color(0f, 0f, 0f, alpha);
+                canvasGroup.alpha = alpha;
 
                 yield return null;
             }

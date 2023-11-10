@@ -55,7 +55,7 @@ namespace GDC.TimeSystem
         {
             Instance.energy -= amount;
 
-            OnEnergyChanged evt = new OnEnergyChanged(Instance.energy);
+            OnEnergyChanged evt = new OnEnergyChanged(Instance.energy, false);
             EventManager.Broadcast(evt);
         }
         #endregion

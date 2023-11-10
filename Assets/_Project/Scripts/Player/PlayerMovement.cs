@@ -10,6 +10,8 @@ namespace GDC.Player
     public class PlayerMovement : MonoBehaviour
     {
         [SerializeField] private Rigidbody2D rb;
+        [SerializeField] private Animator animator;
+        [SerializeField] private float speed = 5f;
 
         #region MonoBehaviour methods
         private void Update()
@@ -52,7 +54,29 @@ namespace GDC.Player
 
         private void Move(Vector2 direction)
         {
-            rb.velocity = direction.normalized * 5f;
+            rb.velocity = direction.normalized * speed;
+
+            AnimateMove(direction);
+            FlipSprite(direction);
+        }
+
+
+
+        private void AnimateMove(Vector2 direction)
+        {
+            if (animator == null) return;
+
+            bool isMoving = direction != Vector2.zero;
+            animator.SetBool("IsMoving", isMoving);
+        }
+
+
+
+        private void FlipSprite(Vector2 direction)
+        {
+            if (direction == Vector2.zero) return;
+
+            transform.rotation = Quaternion.Euler(0f, direction.x > 0 ? 0f : 180f, 0f);
         }
         #endregion
     }
