@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using GDC.Misc;
-using GDC.Time;
+using GDC.TimeSystem;
 using UnityEngine;
 
 namespace GDC.Interaction
@@ -31,11 +31,11 @@ namespace GDC.Interaction
         #region Private methods
         private IEnumerator Wait()
         {
-            FadeBlack.FadeOut(1);
+            // FadeBlack.FadeOut(1);
             yield return new WaitForSeconds(2);
-            TimeManager.AdvanceTime(1);
-            FadeBlack.FadeIn(1);
-            coroutine = null;
+            // TimeManager.AdvanceDay(1);
+            // FadeBlack.FadeIn(1);
+            // coroutine = null;
         }
         #endregion
     }

@@ -4,14 +4,13 @@ using GDC.Utilities;
 using TMPro;
 using UnityEngine;
 
-namespace GDC.Time
+namespace GDC.TimeSystem
 {
     /// <summary>
-    /// Handles the UI behaviour for the clock.
+    /// Handles the UI behaviour for the calendar.
     /// </summary>
-    public class ClockUI : MonoBehaviour
+    public class CalendarUI : MonoBehaviour
     {
-        [SerializeField] private TextMeshProUGUI timeText;
         [SerializeField] private TextMeshProUGUI dayText;
 
         #region MonoBehaviour methods
@@ -33,8 +32,7 @@ namespace GDC.Time
         #region Private methods
         private void OnTimeAdvanced(OnTimeAdvanced evt)
         {
-            timeText.text = evt.Hours.ToString("00") + ":" + evt.Minutes.ToString("00");
-            dayText.text = "Day " + evt.Day + 1.ToString();
+            dayText.text = evt.Day.ToString();
         }
         #endregion
     }

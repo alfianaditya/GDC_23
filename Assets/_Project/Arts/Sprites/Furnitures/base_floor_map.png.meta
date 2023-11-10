@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7c03c49dd2e9c1248a24b5612cc55e8e
+guid: 28e170d2269a1ec43b1ef00bded6e5d7
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -121,133 +121,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: idle_kanan_0
-      rect:
-        serializedVersion: 2
-        x: 31
-        y: 650
-        width: 372
-        height: 608
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9090c7a73d1c9534cb980151a835939d
-      internalID: -2054761312
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: idle_kanan_1
-      rect:
-        serializedVersion: 2
-        x: 487
-        y: 650
-        width: 372
-        height: 608
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2e4eee04d97c3ee47adaa5fb936a149d
-      internalID: -698137131
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: idle_kanan_2
-      rect:
-        serializedVersion: 2
-        x: 943
-        y: 650
-        width: 372
-        height: 608
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 60601c61cb02f6e4f9fc0159c5d6791b
-      internalID: 1947557389
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: idle_kanan_3
-      rect:
-        serializedVersion: 2
-        x: 31
-        y: 18
-        width: 372
-        height: 608
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bec94afa274b4fd488a725e281488a0a
-      internalID: -339583707
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: idle_kanan_4
-      rect:
-        serializedVersion: 2
-        x: 487
-        y: 18
-        width: 372
-        height: 608
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 98ed1ba944d7ab947908671d06e028bf
-      internalID: -1380942846
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: idle_kanan_5
-      rect:
-        serializedVersion: 2
-        x: 943
-        y: 18
-        width: 372
-        height: 608
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a95a0caf7c155bd4e88e6c228ff4c74d
-      internalID: -1574704661
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -258,13 +132,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      idle_kanan_0: -2054761312
-      idle_kanan_1: -698137131
-      idle_kanan_2: 1947557389
-      idle_kanan_3: -339583707
-      idle_kanan_4: -1380942846
-      idle_kanan_5: -1574704661
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
