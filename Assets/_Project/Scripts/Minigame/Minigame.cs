@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 namespace GDC.Minigame
 {
@@ -7,19 +8,18 @@ namespace GDC.Minigame
     /// </summary>
     public class Minigame : MonoBehaviour
     {
-        [SerializeField] private GameObject Item;
-        [SerializeField] private GameObject ItemDrop;
+        [SerializeField] private GameObject AlatPenyiram;
+        [SerializeField] private GameObject Tanaman;
         [SerializeField] private int Range;
         Vector2 ItemPos;
-
-        [SerializeField] private GameObject MinigameObject;
-        [SerializeField] private GameObject Anim;
+        private Animator Anim;
         
 
         #region MonoBehaviour methods
         void Start()
         {
-            ItemPos = Item.transform.position;
+            ItemPos = AlatPenyiram.transform.position;
+            Anim = AlatPenyiram.GetComponent<Animator>();
         }
         #endregion
 
@@ -27,31 +27,39 @@ namespace GDC.Minigame
 
         public void ItemDrag()
         {
-            Item.transform.position = Input.mousePosition;
+            AlatPenyiram.transform.position = Input.mousePosition;
         }
 
         public void ItemEndDrag()
         {
-            float distance = Vector3.Distance(Item.transform.localPosition, ItemDrop.transform.localPosition);
+            float distance = Vector3.Distance(AlatPenyiram.transform.localPosition, Tanaman.transform.localPosition);
             if (distance < Range)
             {
-                Item.transform.position = ItemDrop.transform.position;
-                Minigames();
+                AlatPenyiram.transform.position = Tanaman.transform.position;
+                Siram();
             }
             else
             {
-                Item.transform.position = ItemPos;
+                AlatPenyiram.transform.position = ItemPos;
             }
 
         }
         #endregion
 
-
+        
         #region Private methods
-        private void Minigames()
+        private void Siram()
         {
-            Anim.SetActive(true);
-            MinigameObject.SetActive(false);
+            Anim.SetBool("Siram", true);
+            StartCoroutine(Wait());
+            
+        }
+
+        private IEnumerator Wait()
+        {
+            yield return new WaitForSeconds(8);
+            Anim.SetBool("Siram", false);
+            AlatPenyiram.transform.position = ItemPos;
         }
 
         #endregion
