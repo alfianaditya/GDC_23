@@ -1,0 +1,6 @@
+﻿title: Start
+---
+<<declare $type_delay = 0.01>>
+
+<<jump Day1>>
+===

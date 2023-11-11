@@ -1,0 +1,45 @@
+﻿title: Day1
+tags:
+---
+
+<<set $type_delay to 0.01>>
+
+<<mengontols>>
+
+As far as i remember, today was supposed to be the happiest day of my life. 
+
+My home, usually so quiet, suddenly filled with the warmth and laughter that had been absent for so long. 
+
+The house, once cold and silent, now radiated with the glow of happiness, all thanks to my friends, relatives, and parents who had finally come together.
+
+A towering stack of gifts caught my eye in the corner of the room, and a chocolate cake decorated with candles, including a large one with the number 8, stood as the centerpiece. 
+
+But then, in an instant, everything went dark. 
+
+As I tried to open my eyes, I found myself in a room with a roof I had never seen before. 
+
+The smell was strange and pungent, and I felt a sudden pain in my left hand. 
+
+A peculiar tube was connected to it. 
+
+Where am I, and what is happening?
+
+It was meant to be a day of celebration, surrounded by the love of those closest to me. 
+
+Instead, I found myself in a place of unknowns, with a sense of loss and confusion. 
+
+The contrast between the joyful anticipation and the harsh reality left a bitter taste in my mind.
+
+I tried to muster the strength to wake up from my position but i couldn't.
+
+I feel...
+
+so...
+
+Ti...
+
+//<<camera_shake 1.0>>
+//<<fade_in 1.0>>
+
+<<jump Day1>>
+===
