@@ -13,6 +13,7 @@ namespace GDC.Player
     {
         private Component interactableObject;
         public Component InteractableObject { get { return interactableObject; } }
+        private bool isDisabled;
 
         #region MonoBehaviour methods
         private void OnTriggerEnter2D(Collider2D other)
@@ -33,7 +34,23 @@ namespace GDC.Player
 
         private void Update()
         {
+            if (isDisabled) return;
+
             GetInput();
+        }
+
+
+
+        private void OnEnable()
+        {
+            EventManager.AddListener<OnDialogue>(OnDialogue);
+        }
+
+
+
+        private void OnDisable()
+        {
+            EventManager.RemoveListener<OnDialogue>(OnDialogue);
         }
         #endregion
         
@@ -59,13 +76,20 @@ namespace GDC.Player
 
         private void GetInput()
         {
-            if (Input.GetKeyDown(KeyCode.F))
+            if (Input.GetKeyDown(KeyCode.Space))
             {
                 if (interactableObject != null)
                 {
                     (interactableObject as IInteractable).Interact();
                 }
             }
+        }
+
+
+
+        private void OnDialogue(OnDialogue evt)
+        {
+            isDisabled = evt.isOnDialogue;
         }
         #endregion
     }

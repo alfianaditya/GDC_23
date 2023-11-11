@@ -6,6 +6,7 @@ using TMPro;
 using Yarn.Unity;
 using Unity.VisualScripting;
 using GDC.Core;
+using GDC.Utilities;
 
 namespace GDC.Dialogue.Yarn
 {
@@ -15,6 +16,7 @@ namespace GDC.Dialogue.Yarn
     public class DialogueWindowView: DialogueViewBase
     {
         [SerializeField] private TextMeshProUGUI dialogue;
+        [SerializeField] private TextMeshProUGUI character;
         private Action advanceHandler = null;
         private Coroutine currentCoroutine;
 
@@ -28,6 +30,23 @@ namespace GDC.Dialogue.Yarn
 
 
         #region Public methods
+        public override void DialogueStarted()
+        {
+            OnDialogue evt = new OnDialogue(true);
+            EventManager.Broadcast(evt);
+        }
+
+
+
+        public override void DialogueComplete()
+        {
+            advanceHandler = null;
+            OnDialogue evt = new OnDialogue(false);
+            EventManager.Broadcast(evt);
+        }
+
+
+
         public override void UserRequestedViewAdvancement()
         {
             advanceHandler?.Invoke();
@@ -46,7 +65,9 @@ namespace GDC.Dialogue.Yarn
             float typeDelay;
             GameManager.VariableStorage.TryGetValue("$type_delay", out typeDelay);
 
-            currentCoroutine = StartCoroutine(TypeText(dialogueLine.Text.Text, typeDelay));
+            character.text = dialogueLine.CharacterName;
+
+            currentCoroutine = StartCoroutine(TypeText(dialogueLine.TextWithoutCharacterName.Text, typeDelay));
             advanceHandler = requestInterrupt;
         }
 
@@ -65,7 +86,7 @@ namespace GDC.Dialogue.Yarn
             if (currentCoroutine != null)
             {
                 StopCoroutine(currentCoroutine);
-                dialogue.text = dialogueLine.Text.Text;
+                dialogue.text = dialogueLine.TextWithoutCharacterName.Text;
                 currentCoroutine = null;
 
                 advanceHandler = requestInterrupt;

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using GDC.Utilities;
 
 namespace GDC.Player
 {
@@ -12,11 +13,21 @@ namespace GDC.Player
         [SerializeField] private Rigidbody2D rb;
         [SerializeField] private Animator animator;
         [SerializeField] private float speed = 5f;
+        private bool isDisabled;
 
         #region MonoBehaviour methods
         private void Update()
         {
+            if (isDisabled) return;
+
             GetInput();
+        }
+
+
+
+        private void OnEnable()
+        {
+            EventManager.AddListener<OnDialogue>(OnDialogue);
         }
         #endregion
         
@@ -77,6 +88,23 @@ namespace GDC.Player
             if (direction == Vector2.zero) return;
 
             transform.rotation = Quaternion.Euler(0f, direction.x > 0 ? 0f : 180f, 0f);
+        }
+
+
+
+        private void OnDialogue(OnDialogue evt)
+        {
+            if (evt.isOnDialogue)
+            {
+                rb.velocity = Vector2.zero;
+                animator.SetBool("IsMoving", false);
+                isDisabled = true;
+            }
+
+            else
+            {
+                isDisabled = false;
+            }
         }
         #endregion
     }

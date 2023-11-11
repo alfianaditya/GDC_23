@@ -1,0 +1,33 @@
+﻿title: Day1Door
+tags:
+---
+<<open_window>>
+
+<<if $door_interacted == false>>
+    MC: Hmm it's weird...
+
+    MC: Why the door is locked?
+
+    MC: Hello anyone outside, i am locked here!
+
+    MC: Help me!!!
+
+    MC: ...
+
+    <<set $door_interacted = true>>
+<<else>>
+    MC: Hello anyone outside, i am locked here!
+
+    MC: Help me!!!
+
+    MC: ...
+<<endif>>
+
+<<close_window>>
+
+<<wait 0.5>>
+
+<<if $gift_interacted == true>>
+    <<jump Day1Phone>>
+<<endif>>
+===

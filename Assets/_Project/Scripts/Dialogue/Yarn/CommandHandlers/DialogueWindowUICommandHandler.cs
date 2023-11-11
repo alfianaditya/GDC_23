@@ -115,6 +115,7 @@ namespace GDC.Dialogue.Yarn
             }
 
             dialogueText.color = startColor;
+            dialogueText.text = "";
         }
         #endregion
     }

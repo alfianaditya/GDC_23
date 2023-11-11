@@ -1,0 +1,105 @@
+﻿title: Day1Gift
+tags:
+---
+<<open_window>>
+
+<<if $gift_interacted == true>>
+    <<if $door_interacted == false>>
+        MC: I already opened all the gifts... I should go outside now.
+    <<else>>
+        MC: I already opened all the gifts...
+    <<endif>>
+<<else>>
+    MC: My body feels lighter now!
+
+    MC: Ah, the gift everyone gave me. I should open it now! 
+
+    MC: Woaaahhhhhh, this is it!!!!
+
+    MC: Yesss, finally!
+
+    MC: I got you, wohooooo!
+
+    <<obtain_item_animation "Console" 1>>
+
+    <<close_window>>
+
+    <<wait 2>>
+
+    <<open_window>>
+
+    MC: This is what I really wanted in the whole world
+
+    MC: a brand new console that just launched 3 months ago
+
+    MC: the New Nunedo Slap
+
+    MC: Woahhhhhhh
+
+    MC: what is this?
+
+    MC: The latest release of Nunedo exclusive title
+
+    MC: the sequel to my favorite game of all time, already released
+
+    MC: The Legend of Alien 7.' I should play it after I finish opening all the gifts and set up my new console.
+
+    MC: I wonder what's next...
+
+    MC: Ohhhhh, what is this?
+
+    MC: A little tree?
+
+    <<obtain_item_animation "Tree" 1>>
+
+    <<close_window>>
+
+    <<wait 2>>
+
+    <<open_window>>
+
+    MC: It says...
+
+    MC: Tomato?
+
+    MC: hmm, it also comes with letter in it.
+
+    MC: It says, 'please take care of it,' 
+
+    MC: doesn't have any notes or name on it
+
+    MC: Hmm, I will just put it aside for now.
+
+    MC: I am really excited about what's next...
+
+    MC: What is this???
+
+    MC: Pen and paper?
+
+    <<obtain_item_animation "PenPaper" 1>>
+
+    <<close_window>>
+
+    <<wait 2>>
+
+    <<open_window>>
+
+    MC: Hmm...
+
+    MC: Okay, I think that's all for the gifts... 
+
+    <<if $door_interacted == false>>
+        MC: I suddenly want to see outside right now.
+    <<endif>>
+
+    <<set $gift_interacted = true>>
+<<endif>>
+
+<<close_window>>
+
+<<wait 0.5>>
+
+<<if $door_interacted == true>>
+    <<jump Day1Phone>>
+<<endif>>
+===
