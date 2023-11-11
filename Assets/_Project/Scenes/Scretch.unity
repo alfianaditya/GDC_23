@@ -506,7 +506,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 62, y: -227}
+  m_AnchoredPosition: {x: 0, y: -227}
   m_SizeDelta: {x: 274.9615, y: 339.6214}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &411184776
@@ -2025,6 +2025,7 @@ MonoBehaviour:
   AlatPenyiram: {fileID: 1264463763}
   Tanaman: {fileID: 1929802980}
   Range: 250
+  Anim: {fileID: 0}
 --- !u!1 &1363251259
 GameObject:
   m_ObjectHideFlags: 0
@@ -2884,7 +2885,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -47, y: -51}
+  m_AnchoredPosition: {x: 9.586487, y: -48}
   m_SizeDelta: {x: 168.02898, y: 207.54265}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1962921073
