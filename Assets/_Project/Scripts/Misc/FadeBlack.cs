@@ -22,6 +22,10 @@ namespace GDC.Misc
 
 
         #region Public methods
+        /// <summary>
+        /// Fades the screen to white (black alpha from 1 to 0).
+        /// </summary>
+        /// <param name="duration"></param>
         public static void FadeIn(float duration)
         {
             Instance.StartCoroutine(Instance.FadeBlackIn(duration));
@@ -32,12 +36,34 @@ namespace GDC.Misc
 
 
 
+        /// <summary>
+        /// Fades the screen to black (black alpha from 0 to 1).
+        /// </summary>
+        /// <param name="duration"></param>
         public static void FadeOut(float duration)
         {
             Instance.canvasGroup.interactable = true;
             Instance.canvasGroup.blocksRaycasts = true;
 
             Instance.StartCoroutine(Instance.FadeBlackOut(duration));
+        }
+
+
+
+        public static void FullBlack()
+        {
+            Instance.canvasGroup.alpha = 1f;
+            Instance.canvasGroup.interactable = true;
+            Instance.canvasGroup.blocksRaycasts = true;
+        }
+
+
+
+        public static void NoBlack()
+        {
+            Instance.canvasGroup.alpha = 0f;
+            Instance.canvasGroup.interactable = false;
+            Instance.canvasGroup.blocksRaycasts = false;
         }
         #endregion
 

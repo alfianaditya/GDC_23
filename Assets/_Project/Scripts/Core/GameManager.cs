@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using GDC.Misc;
 using GDC.Utilities;
 using UnityEngine;
 using Yarn.Unity;
@@ -21,13 +22,19 @@ namespace GDC.Core
         {
             variableStorage = GameObject.FindObjectOfType<InMemoryVariableStorage>();
             dialogueRunner = GameObject.FindObjectOfType<DialogueRunner>();
+
+            BeginGame();
         }
         #endregion
         
         
         
         #region Private methods
-        
+        private void BeginGame()
+        {
+            FadeBlack.FullBlack();
+            dialogueRunner.StartDialogue("Start");
+        }
         #endregion
     }
 }

@@ -7,12 +7,12 @@ using Yarn.Unity;
 using Unity.VisualScripting;
 using GDC.Core;
 
-namespace GDC.Dialogue
+namespace GDC.Dialogue.Yarn
 {
     /// <summary>
     /// 
     /// </summary>
-    public class DialogueWindow : DialogueViewBase
+    public class DialogueWindowView: DialogueViewBase
     {
         [SerializeField] private TextMeshProUGUI dialogue;
         private Action advanceHandler = null;
@@ -37,7 +37,7 @@ namespace GDC.Dialogue
 
         public override void RunLine(LocalizedLine dialogueLine, Action onDialogueLineFinished)
         {
-            if (gameObject.activeInHierarchy == false)
+            if (dialogue.gameObject.activeInHierarchy == false)
             {
                 onDialogueLineFinished();
                 return;
@@ -54,7 +54,7 @@ namespace GDC.Dialogue
 
         public override void InterruptLine(LocalizedLine dialogueLine, Action onDialogueLineFinished)
         {
-            if (gameObject.activeInHierarchy == false)
+            if (dialogue.gameObject.activeInHierarchy == false)
             {
                 onDialogueLineFinished();
                 return;
@@ -81,7 +81,7 @@ namespace GDC.Dialogue
 
         public override void DismissLine(Action onDismissalComplete)
         {
-            if (gameObject.activeInHierarchy == false)
+            if (dialogue.gameObject.activeInHierarchy == false)
             {
                 onDismissalComplete();
                 return;
@@ -95,14 +95,6 @@ namespace GDC.Dialogue
 
             advanceHandler = null;
             onDismissalComplete();
-        }
-
-
-
-        [YarnCommand("mengontols")]
-        public static void Mengontols()
-        {
-            Debug.Log("Mengontols");
         }
         #endregion
 
@@ -127,7 +119,19 @@ namespace GDC.Dialogue
             {
                 currentText += letter;
                 dialogue.text = currentText;
-                yield return new WaitForSeconds(delay);
+
+                float punctuationDelayMultiplier;
+                GameManager.VariableStorage.TryGetValue("$punctuation_delay_multiplier", out punctuationDelayMultiplier);
+
+                if (letter == '.' || letter == ',' || letter == '!' || letter == '?')
+                {
+                    yield return new WaitForSeconds(delay * punctuationDelayMultiplier);
+                }
+
+                else
+                {
+                    yield return new WaitForSeconds(delay);
+                }
             }
 
             currentCoroutine = null;

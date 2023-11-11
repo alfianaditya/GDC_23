@@ -2,19 +2,75 @@
 tags:
 ---
 
-<<set $type_delay to 0.01>>
+<<wait 1>>
 
-<<mengontols>>
+<<open_window>>
+
+<<erase_text>>
+
+<<wait 0.5>>
 
 As far as i remember, today was supposed to be the happiest day of my life. 
 
 My home, usually so quiet, suddenly filled with the warmth and laughter that had been absent for so long. 
 
+<<close_window>>
+
+<<fade_in 1>>
+
+<<show_cg "opening_day_1" 1>>
+
+<<wait 2>>
+
+<<open_window>>
+
 The house, once cold and silent, now radiated with the glow of happiness, all thanks to my friends, relatives, and parents who had finally come together.
 
 A towering stack of gifts caught my eye in the corner of the room, and a chocolate cake decorated with candles, including a large one with the number 8, stood as the centerpiece. 
 
-But then, in an instant, everything went dark. 
+<<fade_out 0.5>>
+
+<<wait 0.5>>
+
+<<fade_in 0.5>>
+
+But then... 
+
+<<fade_out 0.5>>
+
+<<wait 0.5>>
+
+<<fade_in 0.5>>
+
+In an instant...
+
+<<fade_out 1>>
+
+<<wait 1>>
+
+<<close_window>>
+
+<<wait 2>>
+
+<<hide_cg 0.1>>
+
+<<open_window>>
+
+<<set $type_delay to 0.1>>
+
+Everything went dark. 
+
+<<close_window>>
+
+<<fade_in 2>>
+
+<<show_cg_animation "eyes_open" 3>>
+
+<<wait 6>>
+
+<<set $type_delay to 0.05>>
+
+<<open_window>>
 
 As I tried to open my eyes, I found myself in a room with a roof I had never seen before. 
 
@@ -34,12 +90,23 @@ I tried to muster the strength to wake up from my position but i couldn't.
 
 I feel...
 
+<<fade_out 1>>
+
+<<wait 1>>
+
+<<fade_in 1>>
+
 so...
+
+<<fade_out 1>>
+
+<<wait 1>>
+
+<<fade_in 1>>
 
 Ti...
 
-//<<camera_shake 1.0>>
-//<<fade_in 1.0>>
+<<fade_out 1>>
 
-<<jump Day1>>
+<<close_window>>
 ===
