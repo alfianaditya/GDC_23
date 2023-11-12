@@ -15,7 +15,7 @@ namespace GDC.Interaction
         #region Public method
         public void Interact()
         {
-            GameManager.DialogueRunner.StartDialogue("Day1Door");
+            GameManager.DialogueRunner.StartDialogue("Door");
         }
         #endregion
     }

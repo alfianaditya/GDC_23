@@ -1,0 +1,98 @@
+﻿title: Bento
+tags:
+---
+<<open_window>>
+
+<<if $food_interacted == false>>
+    <<if $day == 3>>
+        Sighhh...
+
+        I felt a bit hungry
+
+        Wow, what's in there? Smells so good!
+
+        I guess it's fine if i eat this, right...
+
+        And my tummy's rumbling like crazy.
+
+        Whoaa it's look so tasty!
+
+        Let's dig in!
+
+        //after
+
+        Fiuhhhh...
+        I am so full
+        Thank you for the food...
+        Whoever gives me
+        It's so tasty!
+
+        <<wait  0.5>>
+    <<elseif $day == 4>>
+        After all the talks with doctor
+        I haven't had my breakfast yet
+        Let's see what I got today
+        Whoaa it's also look so tasty!
+        It's different from yesterday,
+        A new kind of food that I've never seen or eaten before.
+        Let's dig in!
+
+        //
+
+        Fiuhhhh...
+        I am so full!
+        Thank you for the food...
+        Whoever gives me
+        It's so tasty!
+    <<elseif $day == 5>>
+        Let's see what I got today...
+        ...
+        Hmm...
+        Another unknown food that I never eat or seen...
+        It's look tasty, Let's dig in!
+
+        //
+
+
+        I am so full
+        Thank you for the food...
+        Whoever gives me
+        It's so tasty!
+    <<elseif $day == 6>>
+        What have I got now?
+        ...
+        Hmm...
+        It's...
+        It's...
+        A chocolate cookies!
+        Is this from you Dr.Sparkle?
+        Thank you so much, Doctor.
+        Let's dig in!
+        //
+        The taste just like my mom used to make
+        ...
+        *sob
+        Thank you...
+        Thank you...
+        Thank you so much, Dr. Sparkle
+        *sob
+        It brings back so many memory i had with my mom.
+        In my remains day of life i can taste it once again, i am really grateful
+        Thank you so much, Dr.Sparkle!
+        *sob
+        It's the best gift that I've had in my entire life!
+    <<endif>>
+
+    <<set $plant_count to $plant_count+1>>
+    
+    <<set $plant_interacted to true>>
+
+<<else>>
+    There is no food anymore in the basket
+    I already eat all of it
+<<endif>>
+
+<<wait  0.5>>
+
+<<close_window>>
+===

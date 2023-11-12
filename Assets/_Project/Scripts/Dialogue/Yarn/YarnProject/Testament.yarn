@@ -1,0 +1,100 @@
+﻿title: Testament
+tags:
+---
+<<fade_out 3>>
+
+<<wait 4>>
+
+<<fade_out_panel 0.1>>
+
+<<fade_in_roomcover 0.1>>
+
+<<show_cg "dead" 0.1>>
+
+<<wait  2>>
+
+<<fade_in  3>>
+
+<<wait 5>>
+
+<<fade_out 2>>
+
+<<wait 3>>
+
+<<show_cg "testament" 0.1>>
+
+<<fade_in 2>>
+
+<<wait 5>>
+
+<<open_window>>
+
+Dear whoever finds this,
+
+Hi there. I don't really know you, but I hope you're doing okay. 
+I'm writing this because, well, I've had enough of everything. 
+Life has been a bit too tough for me lately.
+And I just wanted to say some things before I go.
+To those who cared for me, especially my kind doctor.
+Thank you for filling my days with love and care. 
+Life's been tough, but your kindness made it brighter. 
+I'm off on a new adventure now.
+But I'll always remember the warmth you brought to my heart. 
+Goodbye, and thank you for being my friend.
+
+<<if $console_count >= 4>>
+    I found my refuge. 
+    Defeating enemies and mastering the game, I soared through realms until my final sunset.
+    To those who find this, know that in pixels, I lived my dreams. 
+    May my victories inspire your own.
+<<else>>
+    I wrestled with the challenges of my beloved game, striving to conquer its virtual landscapes.
+    Though I may not have reached the end.
+    Let my unfinished game be a reminder that life's quests are not always won.
+    But the adventure is worth every moment.
+<<endif>>
+
+<<if $plant_count >= 4>>
+    I made a tiny tomato tree my friend. 
+    I whispered dreams to its leaves, and it grew tall.
+    A testament to the magic even small hands can create.
+    As I leave, let the little tree remind you,
+    That even in fleeting moments, we can plant seeds of joy.
+<<else>>
+    I tried to make a tomato tree sprout and reach for the sun. 
+    Yet, like me, it faltered and withered.
+    Let my attempt be a reminder that even in failure, there's a beauty in trying.
+    May my small tomato tree stand as a symbol of resilience and the fleeting nature of life.
+<<endif>>
+
+<<if $penpaper_count >= 4>>
+    I painted our home with laughter, streets filled with friends' smiles, and skies holding the warmth of family.
+    As my last breath embraces this canvas, let my testament whisper tales of joy to those who find it. 
+    Farewell, in hues of love, from a little artist's heart.
+<<else>>
+    In my last feeble attempt at creation, I stumbled on the paper, unable to capture the essence of home, friends, and family. 
+    With each imperfect stroke, let my testament be a reminder that even in failure, love remains the true masterpiece.
+    Farewell, from a little artist's imperfect heart.
+<<endif>>
+
+<<if $food_count >= 4>>
+    I savored the taste of my favorite food.
+    A fleeting joy that lingered on my tongue. 
+    The flavors danced like a sweet symphony, a culinary masterpiece.
+    Alone but content, I embraced the warmth, grateful for this last, delicious memory.
+<<else>>
+    I dream of tasting that heavenly dish once more, the one that danced on my taste buds like a joyful melody. 
+    Life's cruel embrace denies me this simple pleasure. 
+    To those who find these words, savor every flavor for me, for in my farewell, the taste lingers just out of reach.
+<<endif>>
+
+Well, I guess that's it. Life was tough, but there were some good parts too. 
+To whoever finds this, take care of the people who are still around. 
+Be nice to them. Cherish every moment you spend with your loved ones; life is short, and you want to make the most of it.
+
+Farewell.
+
+<<close_window>>
+
+<<stop>>
+===

@@ -16,117 +16,117 @@ MC: My home, usually so quiet, suddenly filled with the warmth and laughter that
 
 <<fade_in 1>>
 
-<<show_cg "opening_day_1" 1>>
+// <<show_cg "opening_day_1" 1>>
 
-<<wait 2>>
+// <<wait 2>>
 
-<<open_window>>
+// <<open_window>>
 
-MC: The house, once cold and silent, now radiated with the glow of happiness, all thanks to my friends, relatives, and parents who had finally come together.
+// MC: The house, once cold and silent, now radiated with the glow of happiness, all thanks to my friends, relatives, and parents who had finally come together.
 
-MC: A towering stack of gifts caught my eye in the corner of the room, and a chocolate cake decorated with candles, including a large one with the number 8, stood as the centerpiece. 
+// MC: A towering stack of gifts caught my eye in the corner of the room, and a chocolate cake decorated with candles, including a large one with the number 8, stood as the centerpiece. 
 
-<<fade_out 0.5>>
+// <<fade_out 0.5>>
 
-<<wait 0.5>>
+// <<wait 0.5>>
 
-<<fade_in 0.5>>
+// <<fade_in 0.5>>
 
-MC: But then... 
+// MC: But then... 
 
-<<fade_out 0.5>>
+// <<fade_out 0.5>>
 
-<<wait 0.5>>
+// <<wait 0.5>>
 
-<<fade_in 0.5>>
+// <<fade_in 0.5>>
 
-MC: In an instant...
+// MC: In an instant...
 
-<<fade_out 1>>
+// <<fade_out 1>>
 
-<<wait 1>>
+// <<wait 1>>
 
-<<close_window>>
+// <<close_window>>
 
-<<wait 2>>
+// <<wait 2>>
 
-<<hide_cg 0.1>>
+// <<hide_cg 0.1>>
 
-<<open_window>>
+// <<open_window>>
 
-<<set $type_delay to 0.1>>
+// <<set $type_delay to 0.1>>
 
-MC: Everything went dark. 
+// MC: Everything went dark. 
 
-<<close_window>>
+// <<close_window>>
 
-<<wait 2>>
+// <<wait 2>>
 
-<<fade_in 2>>
+// <<fade_in 2>>
 
-<<show_cg_animation "eyes_open" 5>>
+// <<show_cg_animation "eyes_open" 5>>
 
-<<wait 5>>
+// <<wait 5>>
 
-<<set $type_delay to 0.05>>
+// <<set $type_delay to 0.05>>
 
-<<open_window>>
+// <<open_window>>
 
-MC: As I tried to open my eyes, I found myself in a room with a roof I had never seen before. 
+// MC: As I tried to open my eyes, I found myself in a room with a roof I had never seen before. 
 
-MC: The smell was strange and pungent, and I felt a sudden pain in my left hand. 
+// MC: The smell was strange and pungent, and I felt a sudden pain in my left hand. 
 
-MC: A peculiar tube was connected to it. 
+// MC: A peculiar tube was connected to it. 
 
-MC: Where am I, and what is happening?
+// MC: Where am I, and what is happening?
 
-MC: It was meant to be a day of celebration, surrounded by the love of those closest to me. 
+// MC: It was meant to be a day of celebration, surrounded by the love of those closest to me. 
 
-MC: Instead, I found myself in a place of unknowns, with a sense of loss and confusion. 
+// MC: Instead, I found myself in a place of unknowns, with a sense of loss and confusion. 
 
-MC: The contrast between the joyful anticipation and the harsh reality left a bitter taste in my mind.
+// MC: The contrast between the joyful anticipation and the harsh reality left a bitter taste in my mind.
 
-MC: I tried to muster the strength to wake up from my position but i couldn't.
+// MC: I tried to muster the strength to wake up from my position but i couldn't.
 
-MC: I feel...
+// MC: I feel...
 
-<<fade_out 1>>
+// <<fade_out 1>>
 
-<<wait 1>>
+// <<wait 1>>
 
-<<fade_in 1>>
+// <<fade_in 1>>
 
-MC: so...
+// MC: so...
 
-<<fade_out 1>>
+// <<fade_out 1>>
 
-<<wait 1>>
+// <<wait 1>>
 
-<<fade_in 1>>
+// <<fade_in 1>>
 
-MC: Ti-
+// MC: Ti-
 
-<<fade_out 1>>
+// <<fade_out 1>>
 
-<<close_window>>
+// <<close_window>>
 
-<<wait 1>>
+// <<wait 1>>
 
-<<show_cg countdown_2 0.1>>
+// <<show_cg countdown_2 0.1>>
 
-<<wait 3>>
+// <<wait 3>>
 
-<<fade_in 2>>
+// <<fade_in 2>>
 
-<<wait 4>>
+// <<wait 4>>
 
-<<fade_out 2>>
+// <<fade_out 2>>
 
-<<wait 2>>
+// <<wait 2>>
 
-<<hide_cg 0.1>>
+// <<hide_cg 0.1>>
 
-<<wait 4>>
+// <<wait 4>>
 
 <<fade_in 3>>
 
@@ -135,4 +135,6 @@ MC: Ti-
 <<fade_out_roomcover 3>>
 
 <<fade_in_panel 3>>
+
+<<jump Day2>>
 ===

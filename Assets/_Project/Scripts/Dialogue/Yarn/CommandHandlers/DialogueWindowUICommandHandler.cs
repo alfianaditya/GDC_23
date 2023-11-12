@@ -16,6 +16,10 @@ namespace GDC.Dialogue.Yarn
         [SerializeField] private GameObject dialogueWindow;
         [SerializeField] private Image dialogueWindowImage;
         [SerializeField] private TextMeshProUGUI dialogueText;
+        [SerializeField] private GameObject choices;
+        [SerializeField] private List<TextMeshProUGUI> choiceTexts = new List<TextMeshProUGUI>();
+        private float originalChoiceTextSize;
+        private int choiceIndex = 0;
         private Vector3 originalScale;
 
         #region MonoBehaviour methods
@@ -23,6 +27,7 @@ namespace GDC.Dialogue.Yarn
         {
             base.Awake();
 
+            originalChoiceTextSize = choiceTexts[0].fontSize;
             originalScale = dialogueWindow.transform.localScale;
         }
         #endregion
@@ -52,6 +57,43 @@ namespace GDC.Dialogue.Yarn
         public static void EraseText()
         {
             Instance.dialogueText.text = "";
+        }
+
+
+
+        public static void OpenChoices(List<string> choices)
+        {
+            EraseText();
+            
+            Instance.choices.SetActive(true);
+
+            foreach (TextMeshProUGUI choiceText in Instance.choiceTexts)
+            {
+                choiceText.text = choices[Instance.choiceTexts.IndexOf(choiceText)];
+            }
+
+            Instance.choices.SetActive(true);
+        }
+
+
+
+        public static void CloseChoices()
+        {
+            Instance.choices.SetActive(false);
+        }
+
+
+
+        public static void SetChoiceIndex(int index)
+        {
+            Instance.choiceIndex = index;
+
+            foreach (TextMeshProUGUI choiceText in Instance.choiceTexts)
+            {
+                choiceText.fontSize = Instance.originalChoiceTextSize;
+            }
+
+            Instance.choiceTexts[Instance.choiceIndex].fontSize = Instance.originalChoiceTextSize * 1.5f;
         }
         #endregion
 

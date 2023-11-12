@@ -16,6 +16,8 @@ namespace GDC.Core
         public static InMemoryVariableStorage VariableStorage { get { return Instance.variableStorage;} }
         private DialogueRunner dialogueRunner;
         public static DialogueRunner DialogueRunner { get { return Instance.dialogueRunner;} }
+        [SerializeField] private Transform player;
+        [SerializeField] private Transform playerStartPoint;
 
         #region MonoBehaviour methods
         private void Start()
@@ -29,6 +31,15 @@ namespace GDC.Core
         
         
         
+        #region Public methods
+        public static void ResetPosition()
+        {
+            Instance.player.position = Instance.playerStartPoint.position;
+        }
+        #endregion
+
+
+
         #region Private methods
         private void BeginGame()
         {

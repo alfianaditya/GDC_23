@@ -4,6 +4,17 @@
 <<declare $punctuation_delay_multiplier = 4>>
 <<declare $door_interacted = false>>
 <<declare $gift_interacted = false>>
+<<declare $telephone_ring = false>>
+<<declare $telephone_interacted = false>>
+<<declare $console_interacted = false>>
+<<declare $day = 0>>
+<<declare $console_count = 0>>
+<<declare $plant_count = 0>>
+<<declare $plant_interacted = false>>
+<<declare $penpaper_count = 0>>
+<<declare $penpaper_interacted = false>>
+<<declare $food_count = 0>>
+<<declare $food_interacted = false>>
 
 <<jump Day1>>
 ===

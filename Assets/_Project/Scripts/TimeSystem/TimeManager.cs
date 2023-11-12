@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using GDC.Core;
 using GDC.Utilities;
 using UnityEngine;
 
@@ -34,6 +35,11 @@ namespace GDC.TimeSystem
         public static void AdvanceDay(int days = 1)
         {
             Instance.currentDay += days;
+
+            GameManager.DialogueRunner.VariableStorage.SetValue("$day", Instance.currentDay);
+            
+            SetEnergy(MAX_ENERGY);
+            GameManager.ResetPosition();
 
             OnTimeAdvanced evt = new OnTimeAdvanced(Instance.currentDay);
             EventManager.Broadcast(evt);

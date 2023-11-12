@@ -1,0 +1,491 @@
+﻿title: Phone
+tags:
+---
+<<open_window>>
+
+<<if $day == 2>>
+    <<if $telephone_interacted == false>>
+        Doctor: I've discussed your situation with your relatives and parents.
+
+        Doctor: Unfortunately, due to the nature of your condition
+
+        Doctor: They can't be here in person. I need to be straightforward with you
+
+        Doctor: your condition is unique. Based on my assessment
+
+        Doctor: ...
+
+        Doctor: And from now on you will be lonely and you need to be strong
+
+        Doctor: People can't come here because we still don't know what your illness actually is
+
+        Doctor: And from our test, it's a very dangerous virus that spread so fast and you can't interact with anyone because of that
+
+        Doctor: You will find it very difficult because the nature of this virus makes your energy drain fast.
+
+        Doctor: So my suggestion is you don't do anything that will make you tired even collapse
+
+        Doctor: Just take a rest and always bring the infusion
+
+        Doctor: ...
+
+        Doctor: Actually i also have another bad new for you
+
+        Doctor: ...
+
+        Doctor: I doesn't want to tell you directly but...
+
+        Doctor: I think you need to know this...
+
+        Doctor: ...
+
+        Doctor: your life span is approximately five days from now...
+
+        Doctor: I need you to calm down
+
+        Doctor: I understand this is tough news to process, and I'm he...
+
+        Doctor: Hey...
+
+        <<fade_out 0.5>>
+
+        <<wait 0.5>>
+
+        <<fade_in 0.5>>
+
+        Doctor: N...se
+
+        Doctor: Take the..
+
+        <<fade_out 0.5>>
+
+        <<wait 0.5>>
+
+        <<fade_in 0.5>>
+
+        Doctor: it's...
+
+        Doctor: Fine, don't be afraid ya...
+
+        <<fade_out 0.5>>
+
+        <<wait 0.5>>
+
+        <<fade_in 0.5>>
+
+
+        Doctor: I am here with y...
+
+        <<fade_out  0.1>>
+
+        <<wait  0.2>>
+
+        Doctor: ...
+
+        <<close_window>>
+
+        <<wait 0.5>>
+
+        <<wait 1>>
+
+        <<show_cg countdown_3 0.1>>
+
+        <<fade_out_panel 0.1>>
+
+        <<wait 3>>
+
+        <<fade_in 2>>
+
+        <<wait 4>>
+
+        <<fade_out 2>>
+
+        <<wait 2>>
+
+        <<hide_cg 0.1>>
+
+        <<wait 4>>
+
+        <<fade_in 3>>
+
+        <<advance_day 1>>
+
+        <<fade_in_panel 3>>
+
+        <<set $telephone_interacted to true>>
+
+        <<wait 5>>
+
+        <<jump Day2>>
+    <<endif>>
+<<elseif $day == 3>>
+    <<if $telephone_ring == true>>
+        Doctor: He...Hello
+
+        Doctor: Ah glad to see you wake up
+
+        Doctor: Yesterday, i forgot to introduce myself
+
+        Doctor: My name is Dr. Sakamoto
+
+        Doctor: You can call me 
+
+        Doctor: ....
+
+        Doctor: Dr. Sparkle
+
+        Doctor: Hahaha
+
+        MC: ...
+
+        Doctor: ...
+
+        MC: ...
+
+        MC: (It's a call from the Doctor again)
+
+        MC: (I don't want to talk to him)
+
+        MC: (He is so mean)
+
+        Doctor: No response?
+
+        Doctor: I though it's a nice joke
+
+        Doctor: Hmm...
+
+        Doctor: Ok...
+
+        Doctor: It's nice to hear you wake up
+
+        *your ears ringing*
+
+        Doctor: I want you to stay calm and take a rest for today.
+
+        Doctor: You can use all the object in this room
+
+        Doctor: Have fun and don't play too much, ok?
+
+        Doctor: If you had anything to say, you can always call me, i am here to help you
+
+        Doctor: I am your friend.
+
+        Doctor: Talk to you soon
+
+        Doctor: Ciao!
+
+        <<close_window>>
+
+        <<wait 1>>
+
+        <<open_window>>
+
+        MC: ...
+
+        MC: What a weird doctor...
+
+        MC: This room is... 
+
+        MC: Weird
+
+        MC: And the smell...
+
+        MC: I don't like it!
+
+        MC: It stink and...
+
+        MC: i feel lonely...
+
+        MC: I miss my parents...
+
+        MC: Papa...
+
+        MC: Mama...
+
+        MC: Please come here, i am scared
+
+        MC: why they left me here
+
+        MC: Do they not love me anymore?
+
+        MC: what should i do
+
+        MC: i only have 4 days left
+
+        MC: I don't want wanna die
+
+        MC: I want to see my friend
+
+        MC: I want to see Mama & Papa
+        
+        MC: I don't want to be here
+        <<set $telephone_ring to false>>
+    <<else>>
+        MC: Hmm...
+
+        MC: Weird, the telephone doesn't have any number on it
+        
+        MC: How can i call my parent?
+
+        MC: ...
+
+        MC: I don't even remember my parent number
+
+        MC: Sighhh....
+
+        <<close_window>>
+
+        <<wait  0.5>>
+
+        <<stop>>
+    <<endif>>
+
+<<elseif $day == 4>>
+    <<if $telephone_ring == true>>
+        Hello....
+        Cezzz
+        Dr.Sparkle here!
+        How was your sleep?
+        ...
+        Owwkaaayyy...
+        From my data, hmm...
+        Let's see...
+        You still stable and fine,
+        It's a good news
+        So let's celebrate it!
+        Wahooo!!!
+        ....
+        ....
+        Still no response, ok...
+        Honestly, I am really happy about your condition
+        I hope you also feel the same
+        And...
+        How was your day, having fun?
+        How could i having in this strange room!
+        Ah we got the response here!
+        Hahaha
+        ...
+        ...
+        Yeah you're right...
+        But you know what, i always make a principle that i will be having fun
+        because it's my duty to make everybody smile!
+        Duty? What duty?
+        Oh, just a little secret between me and the universe.
+        Hahaha
+        ...
+        So, tell me, what would make your stay in this strange room more enjoyable?
+        I want to go home.
+        Home, huh? I understand. It's tough being away from the familiar.
+        I miss my dog.
+        Ah, a furry friend! What's your dog's name?
+        Miko, he's really fluffy.
+        the fluffy wonder! Sounds like a great companion.
+        You know what, I also once had a dog named Sparky. He was my best friend.
+        Makes my day happier every day.
+        Really?
+        Absolutely. We used to go on adventures together. 
+        It always been a best adventure whenever i am with Sparky
+        But he died a long-long time ago and I always miss him unti now
+        ...
+        So that is why you named yourself Sparkle
+        ...
+        Yeah you're right!
+        It's just i love him and I want his memory to stay with me
+        Whenever someone call me Sparkle
+        And...
+        What's the best adventure you've had with Miko?
+        We went to the park, and he chased butterflies. It was fun.
+        Wow, that sounds like an amazing adventure!
+        You see, even in this strange room, we can find joy in memories.
+        Tell me more about Max and the butterflies. What colors were they?
+        They were yellow and blue. Miko would jump and try to catch them.
+        That's beautiful. Yellow and blue butterflies dancing with a fluffy friend.
+        You know, sometimes, memories are the best way to escape a strange place.
+        Close your eyes and imagine Max and the butterflies. Can you see them?
+        Yeah, it's like they're here with me.
+        That's the magic of memories.
+        Hold on to them, and you'll never feel alone.
+        Alright, my friend, I'll check in on you again tomorrow.
+        Until then, enjoy the company of Miko and those butterflies in your dreams.
+        Thank you, Doctor Sparkle.
+        Somehow it's make me more calm now
+        You're welcome!
+        Have a nice day
+        Ciao!
+
+
+        Wow i feel so much better now!
+        Turn out he is very kind and fun doctor
+        I should ask him to call my parents, when he call again
+        Hopefully he can help me
+        Let's doing something fun shall we
+        We still had a long day to go
+        Wahooo!!!
+        ...
+        Hehehe
+        <<set $telephone_ring to false>>
+    <<else>>
+        I can't use the telephone
+        The telephone doesn't have any number on it
+        I think it's only to receive a call and can't call
+        What a weird design.
+
+        <<close_window>>
+
+        <<wait  0.5>>
+
+        <<stop>>
+    <<endif>>
+<<elseif $day == 5>>
+    <<if $telephone_ring == true>>
+        Hello, Dr.Sparkle isn't it?
+        Dr. Sparkle reporting for duty...
+        Whoa you are so energic today
+        Hahaha
+        Do you want to share anything with me?
+        Yeah Dr, I am dreaming about Miko and the butterflies kept me company in my sleep.
+        That's wonderful to hear!
+        Miko sounds like a fantastic friend.
+        To chasing you into your dream
+        Hahaha
+        Hehehe, yeah sneaky little Miko
+        Hehehe...
+        So, any new adventures with Miko and the butterflies last night?
+        We went to a magical land with rainbow-colored trees, and Miko could talk!
+        A talking Miko in a rainbow land—now that's a magical adventure.
+        You have quite the imagination, my friend. It's a gift.
+        Thanks, Dr.Sparkle.
+        No problem at all.
+        So, any other favorite places you'd like to explore with Miko in your dreams?
+        Maybe a candy mountain with rivers of chocolate!
+        Ah, a sweet tooth, I see! A candy mountain it is.
+        What kind of candies would you find there?
+        Gummy bears, lollipops, and chocolate fountains!
+        Yum! Gummy bears doing somersaults, lollipops growing like flowers, and chocolate fountains flowing endlessly?
+        Sounds like a delightful place!
+        Speaking of treats, did you have a favorite treat when you were at home?
+        Mom used to make the best chocolate chip cookies.
+        But she couldn't make it anymore, because she is bussy lately
+        Aww, that's bad, but I bet the aroma of freshly baked cookies must have been heavenly isn't it?
+        Yeah, and Miko loved stealing them when Mom wasn't looking.
+        Sneaky Miko!
+        Sounds like he had a sweet tooth too.
+        What was your favorite part about baking cookies with your mom?
+        I liked mixing the dough and licking the spoon.
+        The best part! Nothing beats cookie dough straight from the bowl.
+        You know, sometimes, the simplest moments bring the most joy.
+        Hold on to those memories, my friend. They're precious.
+        Thanks, Doctor Sparkle. It makes being in this strange room a little less strange.
+        I'm glad to hear that. And remember, you're not alone.
+        Miko, the butterflies, and your memories are always here with you.
+        I am also here for you...
+        Thank you, Dr.Sparkle!
+        Ahh!!
+        Okay-okay i will there in a minute
+        I am sorry kiddo, i had something to do
+        Until tomorrow!
+        Ciao!
+
+        Hehehe
+        What a strange doctor
+        ...
+        Ahh, I forgot ask him to call my parents
+        I should try again tomorrow
+        So what should i do next?
+
+        <<set $telephone_ring to false>>
+    <<else>>
+        I can't use the telephone.
+
+        <<close_window>>
+
+        <<wait  0.5>>
+
+        <<stop>>
+    <<endif>>
+<<elseif $day == 6>>
+    <<if $telephone_ring == true>>
+        Hello!
+        Dr. Sparkle isn't it?
+        Thank you so much Doctor for the chocolate cookies
+        The taste is very similar with the one that my mom used to make
+        It's the best gift that I had in my entire life!
+        Hahaha
+        I am glad that...
+        That you like it Kiddo.
+        I am...
+        I am, sorry that I late
+        It's okay doctor i just enjoying my time here
+        NO!!!
+        i am mean...
+        I am really sorry that I am late...
+        What do you mean Doctor?
+        ...
+        ...
+        Hello Dr.Sparkle, are you there?
+        Yeah, yeah I am here.
+        Sorry i got a little busy here
+        Hahaha
+        Ah, okay Doctor thank you so much for spending time with me
+        It's so much when I can talk with you
+        It's okay kiddo don't menttion it
+        Remember it's my duty to make everybody smile right
+        Yeah i remember that
+        But that's so funny...
+        I mean, you can't literally make everybody happy Doctor
+        Hehehe
+        That so silly
+        Hahaha
+        It's that so
+        Silly me, hahaha
+        Oh Doctor I am sorry to disturb you but can you please help me?
+        Sure, kiddo what should I do to help you?
+        Can you call my parents?
+        I want to talk to them before I died
+        Technically I can, but not today, how about tomorrow?
+        It's your last day so i guess that would be perfect?
+        Sure, Doctor thank you so much for you help!
+        One more things doctor
+        What that?
+        Can you please deliver my last latter to them?
+        You can read the content though i don't mind
+        Hehehe
+        Sure I will collect the letter by tomorrow, you can place the letter on the table there?
+        Okay, Doctor
+        Thank you so much
+        You are so kind
+        I hope you can finish your job soon
+        And you can rest and enjoying your time
+        Hahaha
+        Thank you so much, Kiddo
+        Well...
+        Talk to you soon, i need to finish my job here first
+        Okay Doctor, Talk to you-
+
+        Soon...
+        And, the call was end
+        Hmm...
+        Where the strange "Ciao!"
+        I guess he is so busy right now
+        I can't wait till tommorow
+        I hope Doctor will call me soon
+        I really miss my parents and Miko
+        I hope he is well and energic as always
+        Hehehe
+        Well...
+        There is nothing i can do today
+        I had already done what I wanted to do today,
+        I should take a rest and wait for the call
+
+        <<set $telephone_ring to false>>
+
+        <<else>>
+                MC: I don't need to call anyone right now...
+        <<endif>>
+<<endif>>
+
+<<close_window>>
+
+<<wait 0.5>>
+
+===

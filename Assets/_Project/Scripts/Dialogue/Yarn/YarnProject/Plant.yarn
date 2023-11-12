@@ -1,0 +1,124 @@
+﻿title: Plant
+tags:
+---
+<<open_window>>
+
+<<if $plant_interacted == false>>
+    <<if $day == 3>>
+        MC: I also used to watering plant on my classroom...
+
+        MC: I miss my friends...
+
+        MC: I hope this plant will grow soon,
+
+        MC: So I can eat the fruit before I...
+
+        MC:before I died...
+
+        //kasih sfx nangis disini
+
+        <<wait  0.5>>
+    <<elseif $day == 4>>
+        MC: Wow, look at you!
+
+        MC: I can tell just by looking that you had grown
+
+        MC: Keep growing, little tomato tree!
+
+        MC: I can't wait to eat your tasty fruit
+
+        MC: Hehehe
+    <<elseif $day == 5>>
+        //After Interact
+
+        MC: I wonder how long until you will bear fruit
+
+        MC: But don't worry dont rush it
+
+        MC: I will wait and hope that i can taste one of your sweet tomato
+
+        MC: Just imagining it makes me drool
+
+        MC: Hehehe
+    <<elseif $day == 6>>
+        //After Interact
+        
+        MC: Oh!!!
+
+        MC: You look more taller and taller,
+
+        MC: Than the first time i pick you up,
+
+        MC: Little tomato tree i hope you can grow...
+
+        MC: Even without me araound, Hehehe...
+
+        MC: Hehe...
+
+        MC: ...
+    <<elseif $day == 7>>
+        MC: Woaaahh look at this
+
+        MC: Finally, you had grown a fruit, but it's to small
+
+        MC: I bet it will taste bitter, Hehehe...
+
+        MC: Glad to see you grown up so fast while being with me
+
+        MC: Thank you for accompanying me in my last moment
+
+        MC: Little Tomato tree...
+
+        MC: ...
+
+        MC: Ah, I remember now!
+
+        MC: I haven't given you name yet
+
+        MC: ...
+
+        <<wait  0.5>>
+
+        MC: Hmm...
+
+        <<wait  0.5>>
+
+        MC:Aggh...
+
+        MC: I can't think of anything right now!
+
+        MC: Hehehe
+
+        MC: Hope you will grow bigger from now and also grow many fruits that others can enjoy!
+    <<endif>>
+
+    <<set $plant_count to $plant_count+1>>
+    
+    <<set $plant_interacted to true>>
+
+<<else>>
+    <<if $day == 4>>
+        MC: I already watering it.
+
+        MC: I hearing from my teacher, that if you watering a plant to much,
+
+        MC: It will wither...
+
+        <<wait  0.5>>
+
+        MC: I should ask doctor about that if he call me again
+
+        MC: I need to find other activities!
+
+    <<else>>
+        MC: I already watering it,
+
+        MC: I need to find other activities!
+    <<endif>>
+
+<<endif>>
+
+<<wait  0.5>>
+
+<<close_window>>
+===

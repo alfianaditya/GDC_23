@@ -1,0 +1,43 @@
+﻿title: Bed
+tags:
+---
+<<if $telephone_ring>>
+    <<open_window>>
+    
+    I should answer the phone first...
+    
+    <<close_window>>
+
+    <<wait  0.5>>
+
+    <<stop>>
+<<endif>>
+
+<<open_window>>
+
+Skip the day?
+-> Skip the day
+    <<fade_out 2>>
+    <<close_window>>
+    <<wait 4>>
+    <<advance_day 1>>
+    <<fade_in 2>>
+-> Don't
+    <<close_window>>
+    <<wait 0.5>>
+    <<stop>>
+
+<<wait 3>>
+
+<<if $day == 3>>
+    <<jump Day3>>
+<<elseif $day == 4>>
+    <<jump Day4>>
+<<elseif $day == 5>>
+    <<jump Day5>>
+<<elseif $day == 6>>
+    <<jump Day6>>
+<<elseif $day == 7>>
+    <<jump Day7>>
+<<endif>>
+===

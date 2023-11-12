@@ -11,6 +11,7 @@ namespace GDC.Misc
     public class FadeBlack : Singleton<FadeBlack>
     {
         [SerializeField] private CanvasGroup canvasGroup;
+        private Coroutine fadeCoroutine;
 
         #region MonoBehaviour methods
         protected override void Awake()
@@ -28,7 +29,9 @@ namespace GDC.Misc
         /// <param name="duration"></param>
         public static void FadeIn(float duration)
         {
-            Instance.StartCoroutine(Instance.FadeBlackIn(duration));
+            if (Instance.fadeCoroutine != null) Instance.StopCoroutine(Instance.fadeCoroutine);
+
+            Instance.fadeCoroutine = Instance.StartCoroutine(Instance.FadeBlackIn(duration));
 
             Instance.canvasGroup.interactable = false;
             Instance.canvasGroup.blocksRaycasts = false;
@@ -42,10 +45,12 @@ namespace GDC.Misc
         /// <param name="duration"></param>
         public static void FadeOut(float duration)
         {
+            if (Instance.fadeCoroutine != null) Instance.StopCoroutine(Instance.fadeCoroutine);
+
             Instance.canvasGroup.interactable = true;
             Instance.canvasGroup.blocksRaycasts = true;
 
-            Instance.StartCoroutine(Instance.FadeBlackOut(duration));
+            Instance.fadeCoroutine = Instance.StartCoroutine(Instance.FadeBlackOut(duration));
         }
 
 

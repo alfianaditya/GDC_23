@@ -1,0 +1,84 @@
+﻿title: Door
+tags:
+---
+<<open_window>>
+
+<<if $telephone_ring == true>>
+        MC: I should answer the phone first...
+
+        <<close_window>>
+
+        <<wait 0.5>>
+
+        <<stop>>
+<<endif>>
+
+<<if $door_interacted == false>>
+    <<if $day == 2>>
+        MC: Hmm it's weird...
+
+        MC: Why the door is locked?
+
+        MC: Hello anyone outside, i am locked here!
+
+        MC: Help me!!!
+
+        MC: ...
+    <<else>>
+        MC: Hmm...
+
+        MC: The door is still locked...
+
+        MC: *dang
+
+        MC: HELLLOOOOOO
+
+        MC: *dang
+
+        MC: ANYBODY OUTSIDE
+
+        MC: *dang
+
+        MC: *dang
+
+        MC: No response?
+
+        MC: ...
+    <<endif>>
+    <<set $door_interacted = true>>
+<<else>>
+    <<if $day == 2>>
+        MC: Hello anyone outside, i am locked here!
+
+        MC: Help me!!!
+
+        MC: ...
+    <<else>>
+        MC: HELLLOOOOOO
+
+        MC: *dang
+
+        MC: ANYBODY OUTSIDE
+
+        MC: *dang
+
+        MC: *dang
+
+        MC: No response?
+
+        MC: ...
+    <<endif>>
+<<endif>>
+
+<<close_window>>
+
+<<wait 0.5>>
+
+<<if $day == 2>>
+    <<if $gift_interacted == true>>
+        <<if $telephone_ring == false>>
+            <<jump PhoneRing>>
+        <<endif>>
+    <<endif>>
+<<endif>>
+===

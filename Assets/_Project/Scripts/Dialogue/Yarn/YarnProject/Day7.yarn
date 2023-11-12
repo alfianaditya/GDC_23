@@ -1,0 +1,24 @@
+﻿title: Day7
+tags:
+---
+<<open_window>>
+There is no call from the Dr.Sparkle?
+Did Dr.Sparkle still busy?
+I hope he can finish his job soon and talk with me...
+Well while waiting,,,
+I should do something before everything late
+What should i do first?
+Hmm...
+<<close_window>>
+
+<<set $telephone_ring to false>>
+<<set $door_interacted to false>>
+<<set $console_interacted to false>>
+<<set $plant_interacted to false>>
+<<set $penpaper_interacted to false>>
+<<set $food_interacted = false>>
+
+<<wait  3>>
+
+<<jump Testament>>
+===

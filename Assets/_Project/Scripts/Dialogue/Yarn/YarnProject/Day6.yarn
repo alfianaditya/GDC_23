@@ -1,0 +1,27 @@
+﻿title: Day6
+tags:
+---
+<<open_window>>
+My Body feels strange.
+What really happen yesterday?
+Suddenly i lose all my energy,
+Is this the effect of my sickness?
+...
+...
+Is Dr.Sparkle still know about it?
+Speaking of Dr. Sparkle, i think around this time he would call me
+I hope he can finish his job soon and talk with me...
+I need to ask him to call my parents before i die.
+Well...
+While waiting for the doctor's call I will do something else
+What should i do first?
+
+<<set $telephone_ring to true>>
+<<set $door_interacted to false>>
+<<set $console_interacted to false>>
+<<set $plant_interacted to false>>
+<<set $penpaper_interacted to false>>
+<<set $food_interacted = false>>
+
+<<close_window>>
+===

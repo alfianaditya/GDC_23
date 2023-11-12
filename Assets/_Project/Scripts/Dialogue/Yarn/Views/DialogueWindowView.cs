@@ -17,6 +17,7 @@ namespace GDC.Dialogue.Yarn
     {
         [SerializeField] private TextMeshProUGUI dialogue;
         [SerializeField] private TextMeshProUGUI character;
+        private int choiceIndex = 0;
         private Action advanceHandler = null;
         private Coroutine currentCoroutine;
 
@@ -69,6 +70,30 @@ namespace GDC.Dialogue.Yarn
 
             currentCoroutine = StartCoroutine(TypeText(dialogueLine.TextWithoutCharacterName.Text, typeDelay));
             advanceHandler = requestInterrupt;
+        }
+
+
+
+        public override void RunOptions(DialogueOption[] dialogueOptions, Action<int> onOptionSelected)
+        {
+            if (dialogue.gameObject.activeInHierarchy == false)
+            {
+                return;
+            }
+
+            character.text = "";
+
+            DialogueWindowUICommandHandler.OpenChoices(new List<string> { dialogueOptions[0].Line.Text.Text, dialogueOptions[1].Line.Text.Text });
+
+            advanceHandler = () =>
+            {
+                advanceHandler = null;
+                onOptionSelected(choiceIndex);
+                choiceIndex = 0;
+                DialogueWindowUICommandHandler.SetChoiceIndex(choiceIndex);
+
+                DialogueWindowUICommandHandler.CloseChoices();
+            };
         }
 
 
@@ -127,6 +152,28 @@ namespace GDC.Dialogue.Yarn
             if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Mouse0))
             {
                 UserRequestedViewAdvancement();
+            }
+
+            if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
+            {
+                choiceIndex--;
+                if (choiceIndex < 0)
+                {
+                    choiceIndex = 0;
+                }
+
+                DialogueWindowUICommandHandler.SetChoiceIndex(choiceIndex);
+            }
+
+            if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
+            {
+                choiceIndex++;
+                if (choiceIndex > 1)
+                {
+                    choiceIndex = 1;
+                }
+
+                DialogueWindowUICommandHandler.SetChoiceIndex(choiceIndex);
             }
         }
 

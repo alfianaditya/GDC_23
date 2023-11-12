@@ -1,10 +1,12 @@
-﻿title: Day1Gift
+﻿title: Gift
 tags:
 ---
 <<open_window>>
 
 <<if $gift_interacted == true>>
-    <<if $door_interacted == false>>
+    <<if $telephone_ring == true>>
+        MC: I should answer the phone first...
+    <<elseif $door_interacted == false>>
         MC: I already opened all the gifts... I should go outside now.
     <<else>>
         MC: I already opened all the gifts...
@@ -100,6 +102,8 @@ tags:
 <<wait 0.5>>
 
 <<if $door_interacted == true>>
-    <<jump Day1Phone>>
+    <<if $telephone_ring == false>>
+        <<jump PhoneRing>>
+    <<endif>>
 <<endif>>
 ===

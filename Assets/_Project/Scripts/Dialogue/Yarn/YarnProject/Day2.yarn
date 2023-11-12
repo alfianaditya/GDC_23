@@ -1,0 +1,32 @@
+﻿title: Day2
+tags:
+---
+<<set $door_interacted to false>>
+<<set $telephone_ring to true>>
+
+<<open_window>>
+
+MC: I open my eyes again and just hope that all of that news is just a dream
+
+MC: Ouch!!!
+
+MC: My hand suddenly felt sore because of the strange tube connected to my hand
+
+MC: It's definitely not a dream.
+
+MC: what should i do?
+
+MC: ...
+
+MC: Papa...
+
+MC: ...
+
+MC: Mama...
+
+MC: Where are you?
+
+MC: I should call them!
+
+<<close_window>>
+===

@@ -1,0 +1,95 @@
+﻿title: Console
+tags:
+---
+<<open_window>>
+
+<<if $console_interacted == false>>
+    <<if $day == 3>>
+        //After Interact
+        
+        MC: Woaaahhh the game is so fun to play
+
+        MC: It's so far more fun and excited compared to previous tittle
+
+        MC: Sighhhh....
+
+        MC: I was playing like over an hour now but I only reach 20% of the completion
+
+        MC: Sighhhhh, i have so much fun, Hahaha
+    <<elseif $day == 4>>
+        MC: Okay let's play one more time today!
+
+        MC: And let's see how far i can progress,
+
+        MC: Hopefully i can finish it today!
+
+        //After Interact
+
+        MC: Sighhh...
+
+        MC: IT IS SO FUN!
+
+        MC: Now i reach 40% of the completion
+
+        MC: I will play again tommorow!
+
+        MC: Let's find something else to do!
+    <<elseif $day == 5>>
+        //After Interact
+
+        MC: It's so much more fun than yesterday!
+
+        MC: Now I have reached 60% completion of this game,
+
+        MC: Just a little more and i can complete this game,
+
+        MC: I should take a break and find something else.
+    <<elseif $day == 6>>
+        //After Interact
+        
+        MC: Hooray!!!
+
+        MC: Finaly, 80% completion of this game,
+
+        MC: Just a little more i can complete this game,
+
+        MC: LET'S GOOOOO!
+    <<elseif $day == 7>>
+        MC: YESSS!!!
+
+        MC: Finally i finish this game, right at the very end!
+
+        MC: Wahoooo!!!
+        
+        MC: 100% completion
+
+        MC: Hehehe
+
+        MC: Wahoooo!!!
+    <<endif>>
+
+    <<set $console_count to $console_count+1>>
+    <<set $console_interacted to true>>
+
+<<else>>
+    <<if $day == 5>>
+        MC: I am tired of playing the game,
+
+        MC: What else should i do?
+    <<elseif $day == 6>>
+        MC: I think i had enough for today.
+
+        MC: What else should i do?
+    <<else>>
+        MC: I think i had enough playing the game right now
+
+        MC: Let's find something more interesting...
+
+        MC: What should i do next?
+    <<endif>>
+<<endif>>
+
+<<wait  0.5>>
+
+<<close_window>>
+===

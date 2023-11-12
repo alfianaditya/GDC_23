@@ -1,0 +1,15 @@
+﻿title: Day3
+tags:
+---
+<<open_window>>
+*phone ringing*
+**phone ringing**
+<<set $telephone_ring to true>>
+<<set $door_interacted to false>>
+<<set $console_interacted to false>>
+<<set $plant_interacted to false>>
+<<set $penpaper_interacted to false>>
+<<set $food_interacted = false>>
+
+<<close_window>>
+===

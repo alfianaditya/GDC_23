@@ -1,0 +1,102 @@
+﻿title: PenPaper
+tags:
+---
+<<open_window>>
+
+<<if $penpaper_interacted == false>>
+    <<if $day == 3>>
+        MC: Hmm...
+
+        MC: Suddenly i want to make something, so I can leave something when I am..
+
+        MC: How about if I try to draw something?
+
+        MC: Hmm...
+
+        <<wait  0.5>>
+
+        MC: It sounds fun, lets make my masterpiece!
+    <<elseif $day == 4>>
+        MC: Hmm...
+
+        MC: What should i draw next??
+
+        MC: Ahaa!!
+
+        MC: Let's start drawing before my inspiration gone
+
+        //After Interact
+
+        MC: One step a time!
+        
+        MC: My masterpiece is taking shape right now.
+
+        MC: I can sense how it will end if I keep drawing
+
+        MC: But I had enough for today.
+
+        MC: Let's continue tomorrow!
+    <<elseif $day == 5>>
+        //After Interact
+
+        MC: Fiuhh...
+
+        MC: My Masterpiece almost done, let's keep up the good work
+
+        MC: Wahooo!
+    <<elseif $day == 6>>
+        //After Interact
+        
+        MC: It's almost finish!
+
+        MC: Just a little touch and my masterpiece are done!
+
+        MC: I wonder what other say about my masterpiece when it's done
+
+        MC: I want to show it to Miko, he must be happy
+
+        MC: That I can draw him so cute yet so cool
+
+        MC: Hehehe
+
+        MC: I also hope that i can show it to my parents
+
+        MC: I miss them all
+
+        MC: ...
+
+        //SFX Nangis
+    <<elseif $day == 7>>
+        MC: And my final Masterpiece now coming together
+
+        MC: It's my one and only masterpiece that i made in my whole life
+
+        MC: So much fun just by drawing and remembering my time with Miko and my parents
+
+        MC: I really miss them, i hope Dr.Sparkle will call me soon
+
+        MC: I hope his work finish soon.
+    <<endif>>
+    
+    <<set $penpaper_count to $penpaper_count+1>>
+
+    <<set $penpaper_interacted to true>>
+
+<<else>>
+    <<if $day == 3>>
+        MC: I had enough drawing for today
+
+        MC: Turns out it's pretty tiring
+
+        MC: But I feel fulfilled just by doing it!
+    <<else>>
+        MC: I think that's enough for today...
+
+        MC: I need to find something else to do!
+    <<endif>>
+<<endif>>
+
+<<wait  0.5>>
+
+<<close_window>>
+===

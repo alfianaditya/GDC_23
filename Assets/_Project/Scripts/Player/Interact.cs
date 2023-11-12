@@ -16,7 +16,7 @@ namespace GDC.Player
         private bool isDisabled;
 
         #region MonoBehaviour methods
-        private void OnTriggerEnter2D(Collider2D other)
+        private void OnTriggerStay2D(Collider2D other)
         {
             CheckInteractable(other.gameObject);
         }
