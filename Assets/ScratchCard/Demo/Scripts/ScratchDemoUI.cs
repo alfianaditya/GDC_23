@@ -1,10 +1,12 @@
 ﻿using System;
+using GDC.Utilities;
 using UnityEngine;
 using UnityEngine.UI;
+using Yarn.Unity;
 
 namespace ScratchCardAsset.Demo
 {
-	public class ScratchDemoUI : MonoBehaviour
+	public class ScratchDemoUI : Singleton<ScratchDemoUI>
 	{
 		public ScratchCardManager CardManager;
 		public Texture[] Brushes;
@@ -15,10 +17,13 @@ namespace ScratchCardAsset.Demo
 		public Slider BrushScaleSlider;
 		public Text BrushScaleText;
 		public EraseProgress EraseProgress;
+		public ScratchCardManager scratchCardManager; //
+		public GameObject minigamePenPaper; //
 
 		private string ToggleKey = "Toggle";
 		private string BrushKey = "Brush";
 		private string ScaleKey = "Scale";
+		public float Value;
 
 		void Start()
 		{
@@ -36,11 +41,11 @@ namespace ScratchCardAsset.Demo
 			BrushToggles[PlayerPrefs.GetInt(BrushKey)].isOn = true;
 		}
 
-		void Update()
+		private void Update()
 		{
-			if (Input.GetKeyDown(KeyCode.Escape))
+			if (Value >= 80)
 			{
-				Restart();
+				minigamePenPaper.SetActive(false);
 			}
 		}
 
@@ -72,7 +77,8 @@ namespace ScratchCardAsset.Demo
 
 		private void OnEraseProgress(float progress)
 		{
-			var value = Mathf.Round(progress * 100f).ToString();
+			Value = Mathf.Round(progress * 100f);
+			string value = Value.ToString();
 			ProgressText.text = string.Format("Progress: {0}%", value);
 		}
 
@@ -86,5 +92,18 @@ namespace ScratchCardAsset.Demo
 		{
 			UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
 		}
+
+		[YarnCommand("start_penpaper_minigame")]
+        public static void StartPenPaperMinigame(bool done)
+        {
+			if (done) 
+			{
+				Instance.scratchCardManager.ResetScratchCard();
+				return;
+			}
+
+            Instance.minigamePenPaper.SetActive(true);
+			Instance.Value = 0;
+        }
 	}
 }

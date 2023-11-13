@@ -1,4 +1,5 @@
-﻿using ScratchCardAsset.Core;
+﻿using System;
+using ScratchCardAsset.Core;
 using ScratchCardAsset.Core.Data;
 using UnityEngine;
 using UnityEngine.Rendering;
@@ -299,9 +300,17 @@ namespace ScratchCardAsset
 		/// </summary>
 		public void ResetRenderTexture()
 		{
-			cardRenderer.CreateRenderTexture();
-			isFirstFrame = true;
-			IsScratched = true;
+			try 
+			{
+				cardRenderer.CreateRenderTexture();
+				isFirstFrame = true;
+				IsScratched = true;
+			}
+
+			catch (NullReferenceException e)
+			{
+				Debug.Log("Gamau tau hehe ");
+			}
 		}
 
 		/// <summary>

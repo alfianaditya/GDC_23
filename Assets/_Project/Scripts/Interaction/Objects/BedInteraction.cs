@@ -10,7 +10,7 @@ namespace GDC.Interaction
     /// </summary>
     public class BedInteraction : MonoBehaviour, IInteractable
     {
-        public string InteractableName { get; set; }
+        [field:SerializeField] public string InteractableName { get; set; }
 
         #region Public method
         public void Interact()

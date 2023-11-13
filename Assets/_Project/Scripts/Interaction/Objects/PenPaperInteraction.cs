@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using GDC.Core;
 using GDC.TimeSystem;
+using ScratchCardAsset;
 
 namespace GDC.Interaction
 {
@@ -11,7 +12,9 @@ namespace GDC.Interaction
     /// </summary>
     public class PenPaperInteraction : MonoBehaviour, IInteractable
     {
-        public string InteractableName { get; set; }
+        [field:SerializeField] public string InteractableName { get; set; }
+        [SerializeField] private GameObject minigamePenPaper;
+        [SerializeField] private ScratchCardManager scratchCardManager;
 
         #region Public method
         public void Interact()

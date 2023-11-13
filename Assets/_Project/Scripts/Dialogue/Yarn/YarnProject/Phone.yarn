@@ -4,6 +4,15 @@ tags:
 <<open_window>>
 
 <<if $day == 2>>
+    <<if $gift_interacted == false>>
+        MC: I should open the gift first...
+        <<close_window>>
+
+        <<wait 0.5>>
+
+        <<stop>>
+    <<endif>>
+
     <<if $telephone_interacted == false>>
         Doctor: I've discussed your situation with your relatives and parents.
 

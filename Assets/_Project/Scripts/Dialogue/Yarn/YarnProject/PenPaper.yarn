@@ -82,6 +82,8 @@ tags:
 
     <<set $penpaper_interacted to true>>
 
+    <<start_penpaper_minigame false>>
+
 <<else>>
     <<if $day == 3>>
         MC: I had enough drawing for today

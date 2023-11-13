@@ -1,17 +1,21 @@
 using System.Collections;
+using GDC.Dialogue.Yarn;
 using UnityEngine;
 using UnityEngine.UI;
+using Yarn.Unity;
 
 namespace GDC.Watering
 {
     public class Watering : MonoBehaviour
     {
         [SerializeField] private GameObject WateringCan;
+        [SerializeField] private GameObject Plant;
         [SerializeField] private Image WateringLayer;
         private Vector2 originalWateringCanPos;
         private Animator Anim;
         [SerializeField] Animator WaterCeret;
         private RectTransform canvasRect;
+        public float range;
 
         #region MonoBehaviour methods
         private void Start()
@@ -40,6 +44,8 @@ namespace GDC.Watering
                 if (Input.GetMouseButtonDown(0))
                 {
                     Anim.SetTrigger("Watering");
+
+                    CheckIfPlantInRange();
                 }
                 else if (Input.GetMouseButtonUp(0))
                 {
@@ -72,6 +78,16 @@ namespace GDC.Watering
             return wateringLayerRect.rect.Contains(localMousePos);
         }
 
+
+        private void CheckIfPlantInRange()
+        {
+            float distance = Vector2.Distance(WateringCan.transform.position, Plant.transform.position);
+
+            if (distance <= range)
+            {
+                MinigameCommandHandler.StopWateringMinigame();
+            }
+        }
         #endregion
     }
 }

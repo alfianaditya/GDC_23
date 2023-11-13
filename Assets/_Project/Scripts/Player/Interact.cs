@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using GDC.Interaction;
 using GDC.Utilities;
+using TMPro;
 
 namespace GDC.Player
 {
@@ -14,11 +15,13 @@ namespace GDC.Player
         private Component interactableObject;
         public Component InteractableObject { get { return interactableObject; } }
         private bool isDisabled;
+        [SerializeField] private InteractionUI interactionUI;
 
         #region MonoBehaviour methods
         private void OnTriggerStay2D(Collider2D other)
         {
             CheckInteractable(other.gameObject);
+            interactionUI.OnInteractable((interactableObject as IInteractable).InteractableName);
         }
 
 
@@ -26,8 +29,7 @@ namespace GDC.Player
         private void OnTriggerExit2D(Collider2D other)
         {
             interactableObject = null;
-            OnInteractableExit evt = new OnInteractableExit();
-            EventManager.Broadcast(evt);
+            interactionUI.OnInteractableExit("");
         }
 
 

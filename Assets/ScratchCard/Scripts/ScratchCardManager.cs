@@ -1,9 +1,12 @@
-﻿using UnityEngine;
+﻿using GDC.Utilities;
+using ScratchCardAsset.Demo;
+using UnityEngine;
 using UnityEngine.UI;
+using Yarn.Unity;
 
 namespace ScratchCardAsset
 {
-	public class ScratchCardManager : MonoBehaviour
+	public class ScratchCardManager : Singleton<ScratchCardManager>
 	{
 		public enum ScratchCardRenderType
 		{
@@ -33,7 +36,7 @@ namespace ScratchCardAsset
 
 		private Material eraserMaterial;
 
-		void Awake()
+		protected override void Awake()
 		{
 			if (Card == null)
 			{
@@ -155,5 +158,6 @@ namespace ScratchCardAsset
 		{
 			Card.ResetRenderTexture();
 		}
+
 	}
 }

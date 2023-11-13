@@ -96,6 +96,8 @@ tags:
     
     <<set $plant_interacted to true>>
 
+    <<start_watering_minigame>>
+
 <<else>>
     <<if $day == 4>>
         MC: I already watering it.

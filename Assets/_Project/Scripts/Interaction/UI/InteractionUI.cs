@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using GDC.Player;
 using GDC.Utilities;
 using TMPro;
+using UnityEditor;
 using UnityEngine;
 
 namespace GDC.Interaction
@@ -13,38 +14,37 @@ namespace GDC.Interaction
     public class InteractionUI : MonoBehaviour
     {
         [SerializeField] private TextMeshProUGUI objectText;
-        [SerializeField] private CanvasGroup canvasGroup;
+        [SerializeField] private GameObject obj;
 
         #region MonoBehaviour methods
         private void OnEnable()
         {
-            EventManager.AddListener<OnInteractable>(OnInteractable);
-            EventManager.AddListener<OnInteractableExit>(OnInteractableExit);
+
         }
 
 
 
         private void OnDisable()
         {
-            EventManager.RemoveListener<OnInteractable>(OnInteractable);
-            EventManager.RemoveListener<OnInteractableExit>(OnInteractableExit);
+
         }
         #endregion
         
         
         
         #region Private methods
-        private void OnInteractable(OnInteractable evt)
+        public void OnInteractable(string name)
         {
-            canvasGroup.alpha = 1;
-            objectText.text = evt.InteractableName;
+            obj.SetActive(true);
+            objectText.text = name;
         }
 
 
 
-        private void OnInteractableExit(OnInteractableExit evt)
+        public void OnInteractableExit(string name)
         {
-            canvasGroup.alpha = 0;
+            obj.SetActive(false);
+            objectText.text = "";
         }
         #endregion
     }

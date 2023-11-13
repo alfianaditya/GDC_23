@@ -96,5 +96,12 @@ Farewell.
 
 <<close_window>>
 
+<<wait 2>>
+
+<<fade_out 2>>
+
+<<wait  2>>
+
+
 <<stop>>
 ===

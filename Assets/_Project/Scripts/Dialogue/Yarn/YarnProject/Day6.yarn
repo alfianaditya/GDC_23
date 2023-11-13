@@ -22,6 +22,7 @@ What should i do first?
 <<set $plant_interacted to false>>
 <<set $penpaper_interacted to false>>
 <<set $food_interacted = false>>
+<<start_penpaper_minigame true>>
 
 <<close_window>>
 ===
